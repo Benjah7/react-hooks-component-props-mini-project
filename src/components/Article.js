@@ -1,19 +1,19 @@
-import react from "react";
+import React from "react";
 
-const Article = (props) => {
-    return (
-      <div>
-          <article>
-              <h3>{props.title}</h3>
-  
-              <small>{props.date ||"January 1, 1970"  } </small>
-  
-              <p>{props.preview}</p>
-  
-          </article>
-          
-      </div>
-    )
-  }
-  
-  export default Article
+function Article({ title, date, preview, time }) {
+	// const timeTaken = (time) => {
+	// 	console.log(time.ceil(5));
+	// };
+	return (
+		<div>
+			<article>
+				<h3>{title}</h3>
+				{date ? <small>{date}</small> : <small>January 1, 1970</small>}
+
+				<p>{preview}</p>
+			</article>
+		</div>
+	);
+}
+
+export default Article;

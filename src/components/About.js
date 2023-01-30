@@ -1,18 +1,18 @@
-import react from "react";
+import React from "react";
 
-const About = (props) => {
-    return (
-      <div>
-          <aside>
-  
-              <img src= {props.image ||  "https://via.placeholder.com/215" }  alt="blog logo"></img>
-  
-              <p>{props.about}</p>
-  
-          </aside>
-          
-      </div>
-    )
-  }
-  
-  export default About
+function About({ image, about }) {
+	return (
+		<>
+			<aside>
+				{image ? (
+					<img src={image} alt="blog logo" />
+				) : (
+					<img src="https://via.placeholder.com/215" alt="blog logo" />
+				)}
+				<p>{about}</p>
+			</aside>
+		</>
+	);
+}
+
+export default About;
